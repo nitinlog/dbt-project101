@@ -1,0 +1,101 @@
+[0m10:45:09.673471 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b706090>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b751150>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b751690>]}
+
+
+============================== 10:45:09.677231 | 7fdf6e50-ae86-441f-b69a-5a401d436148 ==============================
+[0m10:45:09.677231 [info ] [MainThread]: Running with dbt=1.7.18
+[0m10:45:09.677713 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/nitin/.dbt', 'fail_fast': 'False', 'version_check': 'True', 'log_path': 'logs', 'debug': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt init dbtlearn', 'static_parser': 'True', 'log_format': 'default', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m10:45:09.678170 [warn ] [MainThread]: [ConfigFolderDirectory]: Unable to parse dict {'dir': PosixPath('/Users/nitin/.dbt')}
+[0m10:45:09.678413 [info ] [MainThread]: Creating dbt configuration folder at 
+[0m10:45:09.679184 [debug] [MainThread]: Starter project path: /Users/nitin/Downloads/udemy/dbt/venv/lib/python3.11/site-packages/dbt/include/starter_project
+[0m10:45:09.684657 [info ] [MainThread]: 
+Your new dbt project "dbtlearn" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m10:45:09.684960 [info ] [MainThread]: Setting up your profile.
+[0m10:56:38.319663 [error] [MainThread]: Encountered an error:
+
+[0m10:56:38.334758 [error] [MainThread]: Traceback (most recent call last):
+  File "/Users/nitin/Downloads/udemy/dbt/venv/lib/python3.11/site-packages/dbt/cli/requires.py", line 91, in wrapper
+    result, success = func(*args, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/nitin/Downloads/udemy/dbt/venv/lib/python3.11/site-packages/dbt/cli/requires.py", line 76, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/nitin/Downloads/udemy/dbt/venv/lib/python3.11/site-packages/dbt/cli/main.py", line 516, in init
+    results = task.run()
+              ^^^^^^^^^^
+  File "/Users/nitin/Downloads/udemy/dbt/venv/lib/python3.11/site-packages/dbt/task/init.py", line 344, in run
+    self.setup_profile(profile_name)
+  File "/Users/nitin/Downloads/udemy/dbt/venv/lib/python3.11/site-packages/dbt/task/init.py", line 264, in setup_profile
+    self.create_profile_from_target(adapter, profile_name=profile_name)
+  File "/Users/nitin/Downloads/udemy/dbt/venv/lib/python3.11/site-packages/dbt/task/init.py", line 181, in create_profile_from_target
+    self.create_profile_from_profile_template(profile_template, profile_name)
+  File "/Users/nitin/Downloads/udemy/dbt/venv/lib/python3.11/site-packages/dbt/task/init.py", line 165, in create_profile_from_profile_template
+    target = self.generate_target_from_input(prompts, initial_target)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/nitin/Downloads/udemy/dbt/venv/lib/python3.11/site-packages/dbt/task/init.py", line 131, in generate_target_from_input
+    target[key] = click.prompt(
+                  ^^^^^^^^^^^^^
+  File "/Users/nitin/Downloads/udemy/dbt/venv/lib/python3.11/site-packages/click/termui.py", line 164, in prompt
+    value = prompt_func(prompt)
+            ^^^^^^^^^^^^^^^^^^^
+  File "/Users/nitin/Downloads/udemy/dbt/venv/lib/python3.11/site-packages/click/termui.py", line 147, in prompt_func
+    raise Abort() from None
+click.exceptions.Abort
+
+[0m10:56:38.410137 [debug] [MainThread]: Resource report: {"command_name": "init", "command_wall_clock_time": 688.79877, "process_user_time": 1.473232, "process_kernel_time": 0.278378, "process_mem_max_rss": "111165440", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m10:56:38.411390 [debug] [MainThread]: Command `dbt init` failed at 10:56:38.411199 after 688.80 seconds
+[0m10:56:38.412319 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b73cc50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b751490>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104c1cb10>]}
+[0m10:56:38.413257 [debug] [MainThread]: Flushing usage events
+[0m10:57:04.362467 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106e49810>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106ea9190>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106ea9690>]}
+
+
+============================== 10:57:04.366183 | f87fe34e-fc6f-4f69-9216-68b1d2a7edf6 ==============================
+[0m10:57:04.366183 [info ] [MainThread]: Running with dbt=1.7.18
+[0m10:57:04.366669 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'debug': 'False', 'log_path': 'logs', 'version_check': 'True', 'profiles_dir': '/Users/nitin/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'target_path': 'None', 'invocation_command': 'dbt init', 'send_anonymous_usage_stats': 'True'}
+[0m10:57:51.421535 [info ] [MainThread]: A project called dbtlearn already exists here.
+[0m10:57:51.431574 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 47.114677, "process_user_time": 1.249225, "process_kernel_time": 0.177971, "process_mem_max_rss": "104415232", "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m10:57:51.433011 [debug] [MainThread]: Command `dbt init` succeeded at 10:57:51.432681 after 47.12 seconds
+[0m10:57:51.434104 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106e4b0d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x102f98890>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x102f05c90>]}
+[0m10:57:51.434873 [debug] [MainThread]: Flushing usage events
+[0m10:59:22.925549 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106ffc590>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107038a10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10704da90>]}
+
+
+============================== 10:59:22.929159 | 54f47ed7-70b5-4389-996e-92f5a7b63681 ==============================
+[0m10:59:22.929159 [info ] [MainThread]: Running with dbt=1.7.18
+[0m10:59:22.929667 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/nitin/.dbt', 'fail_fast': 'False', 'version_check': 'True', 'log_path': 'logs', 'warn_error': 'None', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'introspect': 'True', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'invocation_command': 'dbt init dbtlearn', 'send_anonymous_usage_stats': 'True'}
+[0m10:59:22.930458 [debug] [MainThread]: Starter project path: /Users/nitin/Downloads/udemy/dbt/venv/lib/python3.11/site-packages/dbt/include/starter_project
+[0m10:59:22.938985 [info ] [MainThread]: 
+Your new dbt project "dbtlearn" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m10:59:22.939277 [info ] [MainThread]: Setting up your profile.
+[0m11:03:34.642544 [info ] [MainThread]: Profile dbtlearn written to /Users/nitin/.dbt/profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m11:03:34.650986 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 251.77304, "process_user_time": 1.380156, "process_kernel_time": 0.23455, "process_mem_max_rss": "109805568", "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m11:03:34.652354 [debug] [MainThread]: Command `dbt init` succeeded at 11:03:34.652058 after 251.77 seconds
+[0m11:03:34.653657 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106fef110>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10313c250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1031e5310>]}
+[0m11:03:34.654567 [debug] [MainThread]: Flushing usage events
